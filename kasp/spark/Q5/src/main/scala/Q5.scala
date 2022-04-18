@@ -1,7 +1,5 @@
 import org.apache.log4j.{Level, Logger}
-import org.apache.spark.sql.expressions.UserDefinedFunction
 import org.apache.spark.sql.{Dataset, SparkSession}
-import org.apache.spark.sql.functions._
 import scala.reflect.io.Directory
 import java.io.File
 

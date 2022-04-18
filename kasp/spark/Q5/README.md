@@ -11,4 +11,4 @@ Q5: Есть таблица фактов FactTable. Она содержит 100 
 
 Сколько будет файлов с данными в каталоге Hdfs для таблицы Result если при джоине случится shuffle?
 
-Ответ: 4 file_size = 4GB, Parquet block size is 128 MB
+Ответ: 28 file_size = 4GB, Parquet block size is 128 MB
