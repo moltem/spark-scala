@@ -1,7 +1,4 @@
-import org.apache.spark
-import org.apache.spark.sql.functions.{col, lit, upper}
-import org.apache.spark.sql.{Dataset, Row, SparkSession}
-import org.apache.spark.sql.types.{IntegerType, StringType, StructType}
+import org.apache.spark.sql.{Dataset, SparkSession}
 import org.apache.log4j.{Level, Logger}
 
 object Q2 extends App {
@@ -44,7 +41,8 @@ object Q2 extends App {
 
 
     dfSalaries.show()
-
+    println("Count dfSalaries: " + dfSalaries.count())
+    println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     val dfSalariesParallel = spark_posgreSQlReader
       .read
@@ -64,7 +62,6 @@ object Q2 extends App {
     SELECT * FROM pets WHERE owner_id >= 2000 and owner_id < 3000
     */
 
-
     println("++++++++printPhysicalPlan: numPartitions=10 ++++++++++++++++++++++++++++")
     println(dfSalariesParallel.queryExecution.toString())
     println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
@@ -74,7 +71,5 @@ object Q2 extends App {
     println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
     dfSalariesParallel.show()
-
-
 
 }

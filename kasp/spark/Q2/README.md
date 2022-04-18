@@ -1,4 +1,4 @@
-2. Сколько партиций по умолчанию имеет DataFrame при чтении из JDBC источника? 
+Q2. Сколько партиций по умолчанию имеет DataFrame при чтении из JDBC источника? 
 Ответ: 1
 
 Partitioning with JDBC sources (https://medium.com/@radek.strnad/tips-for-using-jdbc-in-apache-spark-sql-396ea7b2e3d3)

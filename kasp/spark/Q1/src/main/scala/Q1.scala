@@ -1,5 +1,4 @@
-import org.apache.spark
-import org.apache.spark.sql.functions.{col, lit, upper}
+import org.apache.spark.sql.functions.col
 import org.apache.spark.sql.{Dataset, Row, SparkSession}
 import org.apache.spark.sql.types.{IntegerType, StringType, StructType}
 import org.apache.log4j.{Level, Logger}
