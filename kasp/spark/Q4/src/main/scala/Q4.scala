@@ -1,7 +1,7 @@
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.expressions.UserDefinedFunction
-import org.apache.spark.sql.{Dataset, SparkSession, functions}
-import org.apache.spark.sql.functions.{lit, _}
+import org.apache.spark.sql.{Dataset, SparkSession}
+import org.apache.spark.sql.functions._
 
 object Q4 extends App {
 
@@ -14,19 +14,11 @@ object Q4 extends App {
     println(ds.queryExecution.executedPlan.treeString)
   }
 
-  def getRandom(start: Int, end: Int): Int = {
-    val r = scala.util.Random
-    start + r.nextInt(end)
-  }
-
-  // UDF
-  val randomNumberUdf: UserDefinedFunction = udf(getRandom(_:Int, _:Int): Int)
-
     //===========================//
     //creating SparkSession
     //===========================//
     val spark = SparkSession.builder()
-      .appName("Data_Skew")
+      .appName("Q4")
       .config("spark.master","local[*]")
       .getOrCreate()
 
