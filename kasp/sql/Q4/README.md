@@ -1,0 +1,1 @@
+Какое отличие(я) между delete from dbo.my_table и truncate table <my_table>?

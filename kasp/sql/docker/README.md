@@ -1,2 +1,3 @@
-1) run docker-compose
-2) run psql.sh
+Start a mssql-server instance running as the SQL Express edition
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=yourStrong(!)Password" -e "MSSQL_PID=Express" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest 
