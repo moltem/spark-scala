@@ -8,9 +8,17 @@ create table dbo.detections (
 ,	detections_cnt  int	not null
 )
 
-select *
+select 
+    id,
+    verdict,
+    detection_date,
+    subsystem,
+    os_version,
+    detections_cnt
 from dbo.detections
 where verdict = @a 
-and detection_date > @b 
 and subsystem = @c 
+and detection_date > @b 
 
+Оптимизация WHERE в запросе SELECT
+Если where состоит из условий, объединенных AND,  они должны располагаться в порядке возрастания вероятности истинности данного условия. Чем быстрее мы получим false  в одном из условий - тем меньше условий будет обработано и тем быстрее выполняется запрос. 
