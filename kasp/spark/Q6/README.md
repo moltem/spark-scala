@@ -29,77 +29,34 @@ Spark Default Shuffle Partition
     You can change this default shuffle partition value using conf method of the SparkSession object 
     or using Spark Submit Command Configurations.
 
---- | ---
 
---- | ---
+Function| Description
+:---: | :---:
 |approx_count_distinct(e: Column)|	Returns the count of distinct items in a group.
---- | ---
 |approx_count_distinct(e: Column, rsd: Double)|	Returns the count of distinct items in a group.
---- | ---
 |avg(e: Column)|	Returns the average of values in the input column.
---- | ---
 |collect_list(e: Column)|	Returns all values from an input column with duplicates.
---- | ---
 |collect_set(e: Column)|	Returns all values from an input column with duplicate values .eliminated.
---- | ---
 |corr(column1: Column, column2: Column)|	Returns the Pearson Correlation Coefficient for two columns.
---- | ---
 |count(e: Column)|	Returns number of elements in a column.
---- | ---
 |countDistinct(expr: Column, exprs: Column*)|	Returns number of distinct elements in the columns.
---- | ---
 |covar_pop(column1: Column, column2: Column)|	Returns the population covariance for two columns.
---- | ---
 |covar_samp(column1: Column, column2: Column)|	Returns the sample covariance for two columns.
---- | ---
 |first(e: Column, ignoreNulls: Boolean)|	Returns the first element in a column when ignoreNulls is set to true, it returns first non null element.
---- | ---
 |first(e: Column)|: Column	Returns the first element in a column.
---- | ---
 |grouping(e: Column)|	Indicates whether a specified column in a GROUP BY list is aggregated or not, returns 1 for aggregated or 0 for not aggregated in the result set.
---- | ---
 |kurtosis(e: Column)|	Returns the kurtosis of the values in a group.
---- | ---
 |last(e: Column, ignoreNulls: Boolean)|	Returns the last element in a column. when ignoreNulls is set to true, it returns last non null element.
---- | ---
 |last(e: Column)|	Returns the last element in a column.
---- | ---
 |max(e: Column)|	Returns the maximum value in a column.
---- | ---
 |mean(e: Column)|	Alias for Avg. Returns the average of the values in a column.
---- | ---
 |min(e: Column)|	Returns the minimum value in a column.
---- | ---
 |skewness(e: Column)|	Returns the skewness of the values in a group.
---- | ---
 |stddev(e: Column)|	alias for `stddev_samp`.
---- | ---
 |stddev_samp(e: Column)|	Returns the sample standard deviation of values in a column.
---- | ---
 |stddev_pop(e: Column)|	Returns the population standard deviation of the values in a column.
---- | ---
 |sum(e: Column)	|Returns the sum of all values in a column.
---- | ---
 |sumDistinct(e: Column)	|Returns the sum of all distinct values in a column.
---- | ---
 |variance(e: Column)	|alias for `var_samp`.
---- | ---
 |var_samp(e: Column)	|Returns the unbiased variance of the values in a column.
---- | ---
 |var_pop(e: Column)	|returns the population variance of the values in a column.
---- | ---
-
-Вертикальные линии обозначают столбцы.
-
-| Таблицы       | Это                | Круто |
-| ------------- |:------------------:| -----:|
-| столбец 3     | выровнен вправо    | $1600 |
-| столбец 2     | выровнен по центру |   $12 |
-| зебра-строки  | прикольные         |    $1 |
-
-Внешние вертикальные линии (|) не обязательны и нужны только, чтобы сам код Markdown выглядел красиво. Тот же код можно записать так:
-
-Markdown | не такой | красивый
---- | --- | ---
-*Но выводится* | `так же` | **клево**
-1 | 2 | 3
